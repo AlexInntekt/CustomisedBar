@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,7 +29,7 @@
                             <visualEffectView opaque="NO" alpha="0.45000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uQK-kj-nJS">
                                 <rect key="frame" x="0.0" y="612" width="375" height="55.5"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Twb-XV-I8d">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
                                 <blurEffect style="light"/>
@@ -36,10 +37,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nZn-0y-dVI">
                                 <rect key="frame" x="0.0" y="611.5" width="375" height="55.5"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lL1-i3-nYV">
-                                <rect key="frame" x="164" y="599" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lL1-i3-nYV">
+                                <rect key="frame" x="141" y="561" width="94" height="94"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="lL1-i3-nYV" secondAttribute="height" multiplier="1:1" id="zmM-TT-XBW"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="best-hd-desktop-wallpapers-backgrounds"/>
+                                <connections>
+                                    <action selector="roundButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UXM-Nt-uB1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -51,6 +57,9 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MRn-ag-PNG" secondAttribute="bottom" id="adS-gK-ofm"/>
                             <constraint firstItem="nZn-0y-dVI" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.083" id="cJx-LO-Sd0"/>
                             <constraint firstItem="uQK-kj-nJS" firstAttribute="centerY" secondItem="nZn-0y-dVI" secondAttribute="centerY" id="deC-1E-Ter"/>
+                            <constraint firstItem="lL1-i3-nYV" firstAttribute="centerY" secondItem="nZn-0y-dVI" secondAttribute="centerY" multiplier="0.95" id="fqq-hs-ICD"/>
+                            <constraint firstItem="lL1-i3-nYV" firstAttribute="width" secondItem="nZn-0y-dVI" secondAttribute="width" multiplier="0.25" id="igt-zF-h5S"/>
+                            <constraint firstItem="lL1-i3-nYV" firstAttribute="centerX" secondItem="nZn-0y-dVI" secondAttribute="centerX" id="nNn-b3-OMG"/>
                             <constraint firstItem="MRn-ag-PNG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="noB-S2-iCN"/>
                             <constraint firstAttribute="trailing" secondItem="MRn-ag-PNG" secondAttribute="trailing" id="uja-bP-KpW"/>
                             <constraint firstItem="uQK-kj-nJS" firstAttribute="centerX" secondItem="nZn-0y-dVI" secondAttribute="centerX" id="v31-hG-Uza"/>
@@ -59,6 +68,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="roundButton" destination="lL1-i3-nYV" id="Vqz-b7-tGa"/>
                         <outlet property="tabBar" destination="nZn-0y-dVI" id="hcr-VL-5hN"/>
                     </connections>
                 </viewController>
@@ -69,5 +79,6 @@
     </scenes>
     <resources>
         <image name="High-Definition-Desktop-Wallpapers-Download-19" width="1920" height="1080"/>
+        <image name="best-hd-desktop-wallpapers-backgrounds" width="1920" height="1080"/>
     </resources>
 </document>

@@ -7,29 +7,62 @@
 //
 
 import UIKit
+import Foundation
+import QuartzCore
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var tabBar: UIView!
+    @IBOutlet weak var roundButton: UIButton!
+    
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
+        //roundButton.imageView?.image = maskRoundedImage(image: #imageLiteral(resourceName: "High-Definition-Desktop-Wallpapers-Download-19"), radius: 100)
         
         
-        //self.tabBar.isTranslucent = true
-        //self.tabBar.alpha = 0.3
-        //self.tabBar.backgroundColor = UIColor.clear.withAlphaComponent(0.8)
-        //self.tabBar.layer.backgroundColor = UIColor.clear.withAlphaComponent(0.7).cgColor
+        roundButton.layer.borderWidth = 1
+        roundButton.layer.masksToBounds = false
+        roundButton.layer.borderColor = UIColor.black.cgColor
+        roundButton.layer.cornerRadius = (roundButton.bounds.size.height) / 2.37
+        roundButton.clipsToBounds = true
+        
+        
+        
+        
+        
         
     }
+    
+    
+    func maskRoundedImage(image: UIImage, radius: CGFloat) -> UIImage
+    {
+        let imageView: UIImageView = UIImageView(image: image)
+        var layer: CALayer = CALayer()
+        layer = imageView.layer
+        layer.masksToBounds = true
+        layer.cornerRadius = radius
+        UIGraphicsBeginImageContext(imageView.bounds.size)
+        layer.render(in: UIGraphicsGetCurrentContext()!)
+        let roundedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return roundedImage!
+    }
+    
 
     //this function hides the status bar upwards:
     override var prefersStatusBarHidden: Bool
     {
         return true
     }
+    
+    @IBAction func roundButton(_ sender: Any)
+    {
+        
+    }
+    
 
 
 }
