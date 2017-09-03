@@ -23,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="High-Definition-Desktop-Wallpapers-Download-19" translatesAutoresizingMaskIntoConstraints="NO" id="MRn-ag-PNG">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="best-hd-desktop-wallpapers-backgrounds" translatesAutoresizingMaskIntoConstraints="NO" id="MRn-ag-PNG">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <visualEffectView opaque="NO" alpha="0.45000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uQK-kj-nJS">
@@ -37,12 +37,11 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nZn-0y-dVI">
                                 <rect key="frame" x="0.0" y="611.5" width="375" height="55.5"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lL1-i3-nYV">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lL1-i3-nYV">
                                 <rect key="frame" x="141" y="561" width="94" height="94"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="lL1-i3-nYV" secondAttribute="height" multiplier="1:1" id="zmM-TT-XBW"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="best-hd-desktop-wallpapers-backgrounds"/>
                                 <connections>
                                     <action selector="roundButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UXM-Nt-uB1"/>
                                 </connections>
@@ -78,7 +77,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="High-Definition-Desktop-Wallpapers-Download-19" width="1920" height="1080"/>
         <image name="best-hd-desktop-wallpapers-backgrounds" width="1920" height="1080"/>
     </resources>
 </document>

@@ -13,21 +13,17 @@ import QuartzCore
 class ViewController: UIViewController {
 
     @IBOutlet weak var tabBar: UIView!
+    
     @IBOutlet weak var roundButton: UIButton!
     
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+
+        round(button: roundButton, with: 10)
         
-        //roundButton.imageView?.image = maskRoundedImage(image: #imageLiteral(resourceName: "High-Definition-Desktop-Wallpapers-Download-19"), radius: 100)
         
-        
-        roundButton.layer.borderWidth = 1
-        roundButton.layer.masksToBounds = false
-        roundButton.layer.borderColor = UIColor.black.cgColor
-        roundButton.layer.cornerRadius = (roundButton.bounds.size.height) / 2.37
-        roundButton.clipsToBounds = true
         
         
         
@@ -36,6 +32,15 @@ class ViewController: UIViewController {
         
     }
     
+    
+    func round(button named: UIButton, with borderWidth: Int)
+    {
+        named.layer.borderWidth = CGFloat(borderWidth)
+        named.layer.masksToBounds = false
+        named.layer.borderColor = UIColor.black.cgColor
+        named.layer.cornerRadius = (roundButton.bounds.size.height) / 2.37
+        named.clipsToBounds = true
+    }
     
     func maskRoundedImage(image: UIImage, radius: CGFloat) -> UIImage
     {
