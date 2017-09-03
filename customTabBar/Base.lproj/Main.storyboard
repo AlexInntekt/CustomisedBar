@@ -23,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="best-hd-desktop-wallpapers-backgrounds" translatesAutoresizingMaskIntoConstraints="NO" id="MRn-ag-PNG">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="High-Definition-Desktop-Wallpapers-Download-19" translatesAutoresizingMaskIntoConstraints="NO" id="MRn-ag-PNG">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <visualEffectView opaque="NO" alpha="0.45000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uQK-kj-nJS">
@@ -37,26 +37,37 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nZn-0y-dVI">
                                 <rect key="frame" x="0.0" y="611.5" width="375" height="55.5"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lL1-i3-nYV">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lL1-i3-nYV">
                                 <rect key="frame" x="141" y="561" width="94" height="94"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="lL1-i3-nYV" secondAttribute="height" multiplier="1:1" id="zmM-TT-XBW"/>
                                 </constraints>
-                                <connections>
-                                    <action selector="roundButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UXM-Nt-uB1"/>
-                                </connections>
+                                <state key="normal" image="High-Definition-Desktop-Wallpapers-Download-19"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fV1-0C-X9n">
+                                <rect key="frame" x="46" y="616" width="47" height="47"/>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaG-gx-lC8">
+                                <rect key="frame" x="284" y="615.5" width="47" height="47"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="jaG-gx-lC8" firstAttribute="centerY" secondItem="nZn-0y-dVI" secondAttribute="centerY" id="2mx-hR-V9X"/>
                             <constraint firstItem="nZn-0y-dVI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6l1-jC-YmA"/>
+                            <constraint firstItem="fV1-0C-X9n" firstAttribute="height" secondItem="lL1-i3-nYV" secondAttribute="height" multiplier="0.5" id="9Jl-G9-1SM"/>
+                            <constraint firstItem="fV1-0C-X9n" firstAttribute="centerY" secondItem="nZn-0y-dVI" secondAttribute="centerY" id="AxZ-IA-Hi5"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nZn-0y-dVI" secondAttribute="bottom" id="BhX-iW-Cff"/>
+                            <constraint firstItem="jaG-gx-lC8" firstAttribute="height" secondItem="lL1-i3-nYV" secondAttribute="height" multiplier="0.5" id="H9N-gc-UQ7"/>
                             <constraint firstItem="nZn-0y-dVI" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Htp-Hf-tkz"/>
                             <constraint firstItem="MRn-ag-PNG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="SJh-ce-7wT"/>
+                            <constraint firstItem="fV1-0C-X9n" firstAttribute="centerX" secondItem="nZn-0y-dVI" secondAttribute="centerX" multiplier="0.37" id="Tcn-eI-yaI"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MRn-ag-PNG" secondAttribute="bottom" id="adS-gK-ofm"/>
                             <constraint firstItem="nZn-0y-dVI" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.083" id="cJx-LO-Sd0"/>
                             <constraint firstItem="uQK-kj-nJS" firstAttribute="centerY" secondItem="nZn-0y-dVI" secondAttribute="centerY" id="deC-1E-Ter"/>
+                            <constraint firstItem="fV1-0C-X9n" firstAttribute="width" secondItem="lL1-i3-nYV" secondAttribute="width" multiplier="0.5" id="fiM-qZ-vpU"/>
                             <constraint firstItem="lL1-i3-nYV" firstAttribute="centerY" secondItem="nZn-0y-dVI" secondAttribute="centerY" multiplier="0.95" id="fqq-hs-ICD"/>
+                            <constraint firstItem="jaG-gx-lC8" firstAttribute="centerX" secondItem="nZn-0y-dVI" secondAttribute="centerX" multiplier="1.64" id="gT4-m0-u8h"/>
                             <constraint firstItem="lL1-i3-nYV" firstAttribute="width" secondItem="nZn-0y-dVI" secondAttribute="width" multiplier="0.25" id="igt-zF-h5S"/>
                             <constraint firstItem="lL1-i3-nYV" firstAttribute="centerX" secondItem="nZn-0y-dVI" secondAttribute="centerX" id="nNn-b3-OMG"/>
                             <constraint firstItem="MRn-ag-PNG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="noB-S2-iCN"/>
@@ -64,11 +75,14 @@
                             <constraint firstItem="uQK-kj-nJS" firstAttribute="centerX" secondItem="nZn-0y-dVI" secondAttribute="centerX" id="v31-hG-Uza"/>
                             <constraint firstItem="uQK-kj-nJS" firstAttribute="height" secondItem="nZn-0y-dVI" secondAttribute="height" id="yzz-ia-gbF"/>
                             <constraint firstItem="uQK-kj-nJS" firstAttribute="width" secondItem="nZn-0y-dVI" secondAttribute="width" id="zhB-zi-PFy"/>
+                            <constraint firstItem="jaG-gx-lC8" firstAttribute="width" secondItem="lL1-i3-nYV" secondAttribute="width" multiplier="0.5" id="zmC-d1-gqd"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="roundButton" destination="lL1-i3-nYV" id="Vqz-b7-tGa"/>
                         <outlet property="tabBar" destination="nZn-0y-dVI" id="hcr-VL-5hN"/>
+                        <outletCollection property="buttons" destination="fV1-0C-X9n" collectionClass="NSMutableArray" id="dhx-5D-MvW"/>
+                        <outletCollection property="buttons" destination="lL1-i3-nYV" collectionClass="NSMutableArray" id="khb-TD-Yj0"/>
+                        <outletCollection property="buttons" destination="jaG-gx-lC8" collectionClass="NSMutableArray" id="iit-Ir-Q0J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -77,6 +91,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="best-hd-desktop-wallpapers-backgrounds" width="1920" height="1080"/>
+        <image name="High-Definition-Desktop-Wallpapers-Download-19" width="1920" height="1080"/>
     </resources>
 </document>
