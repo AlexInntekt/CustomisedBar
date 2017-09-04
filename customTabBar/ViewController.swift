@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     var viewControllers: [String]!
     
     var selectedIndex: Int = 0
+    var currentBackground : Int = 0
     
     var imagesGallery = [#imageLiteral(resourceName: "1007_staya_svet_bloki_1280x1024_(www.GetBg.net)"),#imageLiteral(resourceName: "best-hd-desktop-wallpapers-backgrounds"),#imageLiteral(resourceName: "High-Definition-Desktop-Wallpapers-Download-19"), #imageLiteral(resourceName: "Latest Awesome HD Technology Wallpapers For Technology Lovers 8")]
     
@@ -51,19 +52,6 @@ class ViewController: UIViewController {
         buttons[selectedIndex].isSelected = true
         //didPressTab(buttons[selectedIndex])
         
-        
-        
-        
-        /*
-        let vc = ViewControllerOne
-    
-        addChildViewController(vc!)
-        
-        vc?.view.frame = contentView.bounds
-        contentView.addSubview((vc?.view)!)
-        
-        vc?.didMove(toParentViewController: self)
-       */
     }
     
     
@@ -109,27 +97,23 @@ class ViewController: UIViewController {
             self.contentView.addSubview((vc?.view)!)
             
             print("\n #The user tapped the center button")
-            background.image = imagesGallery[0]
+            
+            if currentBackground == imagesGallery.count-1
+            {
+                currentBackground = 0
+                background.image = imagesGallery[currentBackground]
+                
+                
+            }
+            else
+            {
+                background.image = imagesGallery[currentBackground]
+                currentBackground += 1
+            }
+            
         }
         
         
-        
-        
-        //let previousIndex = selectedIndex
-        //selectedIndex = sender.tag
-        //buttons[previousIndex].isSelected = false
-        //let previousVC = viewControllers[previousIndex]
-        //previousVC.willMove(toParentViewController: nil)
-        //previousVC.view.removeFromSuperview()
-        //previousVC.removeFromParentViewController()
-        //sender.isSelected = true
-        
-        //let vc = viewControllers[selectedIndex]
-        //addChildViewController(vc)
-       // vc.view.frame = contentView.bounds
-       // contentView.addSubview(vc.view)
-        
-        //vc.didMove(toParentViewController: self)
         
     }
     
