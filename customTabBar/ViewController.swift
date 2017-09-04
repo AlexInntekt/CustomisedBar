@@ -18,12 +18,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var contentView: UIView!
     
-    var viewControllers: [String]!
-    
-    var selectedIndex: Int = 0
-    var currentBackground : Int = 0
-    
-    var imagesGallery = [#imageLiteral(resourceName: "1007_staya_svet_bloki_1280x1024_(www.GetBg.net)"),#imageLiteral(resourceName: "best-hd-desktop-wallpapers-backgrounds"),#imageLiteral(resourceName: "High-Definition-Desktop-Wallpapers-Download-19"), #imageLiteral(resourceName: "Latest Awesome HD Technology Wallpapers For Technology Lovers 8")]
+
     
 
     @IBOutlet weak var background: UIImageView!
@@ -40,17 +35,19 @@ class ViewController: UIViewController {
         viewControllers = ["ViewControllerOne", "homeViewController", "ViewControllerTwo"]
         
         
-        //round the center button:
-        round(button: buttons[1], with: 5)
+  
+       
         
-        buttons[0].backgroundColor = UIColor.black
-        round(button: buttons[0], with: 2)
+        round(button: buttons[0], with: 5)
         
-        buttons[2].backgroundColor = UIColor.blue
         round(button: buttons[2], with: 2)
         
+        round(button: buttons[1], with: 1, radius: 4)
+        
+        
         buttons[selectedIndex].isSelected = true
-        //didPressTab(buttons[selectedIndex])
+ 
+        didPressTab(buttons[2])
         
     }
     
@@ -67,65 +64,43 @@ class ViewController: UIViewController {
     {
         print("\n #User tapped the bottom bar.")
         
-        if(sender.tag != 1) //meaning that the side buttons are tapped:
+        //remove previous subview:
+        for subview in contentView.subviews
         {
-            //remove previous subview:
-            for subview in contentView.subviews
+            print("for removing...")
+            subview.removeFromSuperview()
+        }
+        
+        if(sender.tag == 1)  //if the center button is tapped:
+        {
+            if currentBackground == imagesGallery.count-1
             {
-                print("for removing...")
-                subview.removeFromSuperview()
+                currentBackground = 0
+            }
+            else
+            {
+                currentBackground += 1
             }
             
+            background.image = imagesGallery[currentBackground]
+        }
+        else
+        {
             let vc = storyboard?.instantiateViewController(withIdentifier: viewControllers[sender.tag])
             
             self.addChildViewController(vc!)
             self.contentView.addSubview((vc?.view)!)
             vc?.view.frame = contentView.bounds
         }
-        else  //if the center button is tapped:
-        {
-            //remove previous subview:
-            for subview in contentView.subviews
-            {
-                print("for removing...")
-                subview.removeFromSuperview()
-            }
-            
-            let vc = storyboard?.instantiateViewController(withIdentifier: viewControllers[sender.tag])
-            
-            self.addChildViewController(vc!)
-            self.contentView.addSubview((vc?.view)!)
-            
-            print("\n #The user tapped the center button")
-            
-            if currentBackground == imagesGallery.count-1
-            {
-                currentBackground = 0
-                background.image = imagesGallery[currentBackground]
-                
-                
-            }
-            else
-            {
-                background.image = imagesGallery[currentBackground]
-                currentBackground += 1
-            }
-            
-        }
+
         
+
         
-        
+    
     }
     
     
-    func round(button named: UIButton, with borderWidth: Int, radius Parameter: CGFloat = 2.37)
-    {
-        named.layer.borderWidth = CGFloat(borderWidth)
-        named.layer.masksToBounds = false
-        named.layer.borderColor = UIColor.black.cgColor
-        named.layer.cornerRadius = (named.bounds.size.height) / Parameter
-        named.clipsToBounds = true
-    }
+
     
     //you can try this function as well if you want:
     func maskRoundedImage(image: UIImage, radius: CGFloat) -> UIImage

@@ -24,19 +24,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XvK-Y7-GSB">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="615"/>
-                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MRn-ag-PNG">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XvK-Y7-GSB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nZn-0y-dVI">
                                 <rect key="frame" x="0.0" y="611" width="375" height="55.5"/>
                             </view>
                             <visualEffectView opaque="NO" alpha="0.45000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uQK-kj-nJS">
                                 <rect key="frame" x="0.0" y="611" width="375" height="55.5"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Twb-XV-I8d">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
                                 <blurEffect style="light"/>
@@ -57,8 +57,9 @@
                                     <action selector="didPressTab:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xBt-AR-NyC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaG-gx-lC8">
-                                <rect key="frame" x="284" y="615.5" width="47" height="47"/>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaG-gx-lC8">
+                                <rect key="frame" x="284.5" y="616" width="47" height="47"/>
+                                <state key="normal" image="signs"/>
                                 <connections>
                                     <action selector="didPressTab:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QwD-eH-EAU"/>
                                 </connections>
@@ -73,6 +74,7 @@
                             <constraint firstItem="fV1-0C-X9n" firstAttribute="centerY" secondItem="nZn-0y-dVI" secondAttribute="centerY" id="AxZ-IA-Hi5"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nZn-0y-dVI" secondAttribute="bottom" id="BhX-iW-Cff"/>
                             <constraint firstAttribute="trailing" secondItem="XvK-Y7-GSB" secondAttribute="trailing" id="CSq-ak-3lU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XvK-Y7-GSB" secondAttribute="bottom" id="GYl-Ou-tRY"/>
                             <constraint firstItem="jaG-gx-lC8" firstAttribute="height" secondItem="lL1-i3-nYV" secondAttribute="height" multiplier="0.5" id="H9N-gc-UQ7"/>
                             <constraint firstItem="nZn-0y-dVI" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Htp-Hf-tkz"/>
                             <constraint firstItem="MRn-ag-PNG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="SJh-ce-7wT"/>
@@ -85,7 +87,6 @@
                             <constraint firstItem="lL1-i3-nYV" firstAttribute="centerY" secondItem="nZn-0y-dVI" secondAttribute="centerY" multiplier="0.95" id="fqq-hs-ICD"/>
                             <constraint firstItem="jaG-gx-lC8" firstAttribute="centerX" secondItem="nZn-0y-dVI" secondAttribute="centerX" multiplier="1.64" id="gT4-m0-u8h"/>
                             <constraint firstItem="lL1-i3-nYV" firstAttribute="width" secondItem="nZn-0y-dVI" secondAttribute="width" multiplier="0.25" id="igt-zF-h5S"/>
-                            <constraint firstItem="jaG-gx-lC8" firstAttribute="top" secondItem="XvK-Y7-GSB" secondAttribute="bottom" id="mcA-uT-Deb"/>
                             <constraint firstItem="lL1-i3-nYV" firstAttribute="centerX" secondItem="nZn-0y-dVI" secondAttribute="centerX" id="nNn-b3-OMG"/>
                             <constraint firstItem="MRn-ag-PNG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="noB-S2-iCN"/>
                             <constraint firstAttribute="trailing" secondItem="MRn-ag-PNG" secondAttribute="trailing" id="uja-bP-KpW"/>
@@ -108,10 +109,10 @@
             </objects>
             <point key="canvasLocation" x="24.800000000000001" y="36.431784107946029"/>
         </scene>
-        <!--View Controller-->
+        <!--VC1-->
         <scene sceneID="opf-l2-fvS">
             <objects>
-                <viewController storyboardIdentifier="ViewControllerTwo" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zA5-qZ-Y2j" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewControllerTwo" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zA5-qZ-Y2j" customClass="VC1" customModule="customTabBar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vJQ-pk-0cd"/>
                         <viewControllerLayoutGuide type="bottom" id="tGr-OP-R0e"/>
@@ -144,10 +145,10 @@
             </objects>
             <point key="canvasLocation" x="808.79999999999995" y="484.40779610194909"/>
         </scene>
-        <!--View Controller-->
+        <!--VC1-->
         <scene sceneID="cg6-ql-m4D">
             <objects>
-                <viewController storyboardIdentifier="ViewControllerOne" useStoryboardIdentifierAsRestorationIdentifier="YES" id="i4k-4E-NmV" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewControllerOne" useStoryboardIdentifierAsRestorationIdentifier="YES" id="i4k-4E-NmV" customClass="VC1" customModule="customTabBar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oG9-eO-ISe"/>
                         <viewControllerLayoutGuide type="bottom" id="nvc-Tp-lG8"/>
@@ -156,25 +157,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tab 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Xp-v1-ysh">
-                                <rect key="frame" x="46" y="75" width="291" height="141"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="141" id="913-38-PlY"/>
-                                    <constraint firstAttribute="width" constant="291" id="l5U-B2-bKS"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rae-tK-e4f">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ne3-S1-G6P">
+                                <rect key="frame" x="9" y="33.5" width="357.5" height="45.5"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="B4f-TI-uNi">
+                                    <rect key="frame" x="0.0" y="0.0" width="357.5" height="45.5"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is viewController One" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Xp-v1-ysh">
+                                <rect key="frame" x="25" y="40" width="325" height="32.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2Xp-v1-ysh" firstAttribute="leading" secondItem="Gcw-28-pkU" secondAttribute="leadingMargin" constant="30" id="BdO-j2-f8z"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="2Xp-v1-ysh" secondAttribute="trailing" constant="22" id="a4C-Xw-hDw"/>
-                            <constraint firstItem="2Xp-v1-ysh" firstAttribute="top" secondItem="oG9-eO-ISe" secondAttribute="bottom" constant="55" id="krq-KX-Znu"/>
-                            <constraint firstItem="nvc-Tp-lG8" firstAttribute="top" secondItem="2Xp-v1-ysh" secondAttribute="bottom" constant="451" id="py2-Tj-7MU"/>
+                            <constraint firstAttribute="trailing" secondItem="rae-tK-e4f" secondAttribute="trailing" id="4NV-iM-aV0"/>
+                            <constraint firstItem="Ne3-S1-G6P" firstAttribute="height" secondItem="2Xp-v1-ysh" secondAttribute="height" multiplier="1.4" id="75B-KG-Za1"/>
+                            <constraint firstItem="nvc-Tp-lG8" firstAttribute="top" secondItem="rae-tK-e4f" secondAttribute="bottom" id="9Op-0c-OCt"/>
+                            <constraint firstItem="Ne3-S1-G6P" firstAttribute="centerY" secondItem="2Xp-v1-ysh" secondAttribute="centerY" id="9u9-dC-cYw"/>
+                            <constraint firstItem="2Xp-v1-ysh" firstAttribute="leading" secondItem="Gcw-28-pkU" secondAttribute="leadingMargin" constant="9" id="Hhv-K7-DC5"/>
+                            <constraint firstItem="rae-tK-e4f" firstAttribute="leading" secondItem="Gcw-28-pkU" secondAttribute="leading" id="KSE-yv-jWZ"/>
+                            <constraint firstItem="Ne3-S1-G6P" firstAttribute="width" secondItem="2Xp-v1-ysh" secondAttribute="width" multiplier="1.1" id="fsQ-tY-WTU"/>
+                            <constraint firstItem="Ne3-S1-G6P" firstAttribute="centerX" secondItem="2Xp-v1-ysh" secondAttribute="centerX" id="kyv-3a-3RH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2Xp-v1-ysh" secondAttribute="trailing" constant="9" id="lXY-9M-uoe"/>
+                            <constraint firstItem="2Xp-v1-ysh" firstAttribute="top" secondItem="oG9-eO-ISe" secondAttribute="bottom" constant="20" id="mdo-La-kKp"/>
+                            <constraint firstItem="rae-tK-e4f" firstAttribute="top" secondItem="Gcw-28-pkU" secondAttribute="top" id="pHo-YM-KuY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="background" destination="rae-tK-e4f" id="UGX-CD-VXw"/>
+                        <outlet property="blurEffect" destination="Ne3-S1-G6P" id="t2q-gx-y67"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ash-pa-Fm3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -183,5 +202,6 @@
     </scenes>
     <resources>
         <image name="High-Definition-Desktop-Wallpapers-Download-19" width="1920" height="1080"/>
+        <image name="signs" width="512" height="512"/>
     </resources>
 </document>
