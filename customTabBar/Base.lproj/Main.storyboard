@@ -175,9 +175,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BSD-m0-vjZ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BSD-m0-vjZ">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <visualEffectView opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aSC-Lt-s5D">
                                 <rect key="frame" x="9" y="501" width="357.5" height="97.5"/>
@@ -204,8 +203,12 @@
                             <constraint firstItem="ZQY-uZ-1rT" firstAttribute="leading" secondItem="2ac-be-xqS" secondAttribute="leadingMargin" constant="9" id="HOO-rG-VnD"/>
                             <constraint firstItem="aSC-Lt-s5D" firstAttribute="width" secondItem="ZQY-uZ-1rT" secondAttribute="width" multiplier="1.1" id="LPw-4o-hrk"/>
                             <constraint firstItem="S4T-HE-acM" firstAttribute="top" secondItem="ZQY-uZ-1rT" secondAttribute="bottom" constant="80" id="QKU-Jd-c4F"/>
+                            <constraint firstItem="BSD-m0-vjZ" firstAttribute="top" secondItem="2ac-be-xqS" secondAttribute="top" id="Rle-U3-x65"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZQY-uZ-1rT" secondAttribute="trailing" constant="9" id="UBS-uJ-igc"/>
                             <constraint firstItem="aSC-Lt-s5D" firstAttribute="height" secondItem="ZQY-uZ-1rT" secondAttribute="height" multiplier="1.3" id="Zoq-GC-Sks"/>
+                            <constraint firstItem="BSD-m0-vjZ" firstAttribute="leading" secondItem="2ac-be-xqS" secondAttribute="leading" id="dw5-ML-F1s"/>
+                            <constraint firstAttribute="trailing" secondItem="BSD-m0-vjZ" secondAttribute="trailing" id="gDi-wh-TeO"/>
+                            <constraint firstItem="S4T-HE-acM" firstAttribute="top" secondItem="BSD-m0-vjZ" secondAttribute="bottom" id="rfq-2P-Jps"/>
                             <constraint firstItem="aSC-Lt-s5D" firstAttribute="centerY" secondItem="ZQY-uZ-1rT" secondAttribute="centerY" id="sbb-al-fJC"/>
                         </constraints>
                     </view>

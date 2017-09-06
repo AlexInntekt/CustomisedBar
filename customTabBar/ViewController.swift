@@ -12,10 +12,12 @@ import QuartzCore
 
 class ViewController: UIViewController {
 
+    //UIView that is used as tabBar:
     @IBOutlet weak var tabBar: UIView!
     
     @IBOutlet var buttons: [UIButton]!
     
+    //the contentView of the main ViewController that will contain the content of the additional viewControllers:
     @IBOutlet weak var contentView: UIView!
     
 
@@ -27,16 +29,9 @@ class ViewController: UIViewController {
     {
         super.viewDidLoad()
         
-        
-        //let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        
-        
+    
         viewControllers = ["ViewControllerOne", "homeViewController", "ViewControllerTwo"]
         
-        
-  
-       
         
         round(button: buttons[0], with: 5)
         
@@ -51,7 +46,6 @@ class ViewController: UIViewController {
         
     }
     
-    
 
     //this function hides the status bar upwards:
     override var prefersStatusBarHidden: Bool
@@ -59,7 +53,7 @@ class ViewController: UIViewController {
         return true
     }
     
-
+    
     @IBAction func didPressTab(_ sender: UIButton)
     {
         print("\n #User tapped the bottom bar.")
@@ -83,9 +77,13 @@ class ViewController: UIViewController {
             }
             
             background.image = imagesGallery[currentBackground]
+            
+            buttons[1].isSelected = false
         }
         else
         {
+            
+            
             let vc = storyboard?.instantiateViewController(withIdentifier: viewControllers[sender.tag])
             
             self.addChildViewController(vc!)
@@ -101,8 +99,7 @@ class ViewController: UIViewController {
     
     
 
-    
-    //you can try this function as well if you want:
+    //you can try this function as well if you want, for rounding images:
     func maskRoundedImage(image: UIImage, radius: CGFloat) -> UIImage
     {
         let imageView: UIImageView = UIImageView(image: image)
@@ -117,7 +114,7 @@ class ViewController: UIViewController {
         return roundedImage!
     }
     
-    
+    /*
     func roundForAutoLayout(button named: UIButton, with borderWidth: Int, radius Parameter: CGFloat = 2.37)
     {
         named.layer.borderWidth = CGFloat(borderWidth)
@@ -126,7 +123,7 @@ class ViewController: UIViewController {
         named.layer.cornerRadius = 47
         named.clipsToBounds = true
     }
-    
+    */
 
 }
 
